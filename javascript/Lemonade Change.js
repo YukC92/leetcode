@@ -14,16 +14,14 @@ var lemonadeChange = function (bills) {
             if (register['fives'] < 0) {
                 return false;
             }
-            register['tens'] += 1; //add a 10 to the register
+            register['tens'] += 1; 
         } else if (bills[x] == 20) {
-            register['fives'] -= 1; //give back a five
-            register['tens'] -= 1; //add a 10 to the register
+            register['fives'] -= 1; 
+            register['tens'] -= 1; 
             if (register['fives'] < 0 || register['tens'] < 0) {
-                //you could payback with all 5's
-                //specifically if out of 10s
                 if (register['tens'] < 0) {
                     register['tens'] += 1;
-                    register['fives'] -= 2; //removing two instead of three because I already removed one earlier
+                    register['fives'] -= 2; 
                     if (register['fives'] < 0) {
                         return false;
                     }
