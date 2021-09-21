@@ -8,7 +8,6 @@ var countBinarySubstrings = function (s) {
     let char = null;
     let currCount = 0;
 
-    // loop past end of array, using s[s.length] (undefined) as a sentinel to trigger the s[i] !== char condition on the last group
     for (let i = 0; i <= s.length; i++) {
         if (s[i] !== char) {
             total += Math.min(prevCount, currCount);
